@@ -7,7 +7,7 @@ from main import get_date_list, read_price_data
 stock_symbol = 'MANU' # Stock symbol
 
 # Set time period
-start_date = datetime.datetime(2021, 2, 1)
+start_date = datetime.datetime(2022, 1, 1)
 end_date = datetime.datetime(2023, 10, 1)
 interval = 'd' # Date interval, by default daily ('d')
 
@@ -18,6 +18,12 @@ try:
 except:
     print('Import failed')
 
+
+# num = 1
+# for date in date_list:
+#     print(num, " - ", date)
+#     num+=1
+
 fig, ax = plt.subplots(figsize=(15, 8))
 
 # Manually set your annotations of events here
@@ -26,105 +32,39 @@ fig, ax = plt.subplots(figsize=(15, 8))
 
 #Greenwwod
 
-ax.annotate('16 February 2021',
-            xy=(date_list[11], price_series[11]),
+ax.annotate('February 1: Greenwood is further arrested',
+            xy=(date_list[21], price_series[21]),
             xycoords='data',
             bbox=dict(boxstyle="square", fc="none", ec="red"),  # Set edge color to black
-            xytext=(45, 170),
+            xytext=(197, 150),
             textcoords='offset points',
             arrowprops=dict(arrowstyle='->', color='red'),  # Set arrow color to black
             va='center',
             ha='right',
-            fontsize=15)
+            fontsize=12)
 
-ax.annotate('22 January 2022',
-            xy=(date_list[247], price_series[247]),
+ax.annotate('November 21: Greenwood appears\nat Manchester Crown Court',
+            xy=(date_list[224], price_series[224]),
             xycoords='data',
             bbox=dict(boxstyle="square", fc="none", ec="red"),  # Set edge color to black
-            xytext=(0, -40),
+            xytext=(-20, 45),
             textcoords='offset points',
             arrowprops=dict(arrowstyle='->', color='red'),  # Set arrow color to black
             va='center',
             ha='right',
-            fontsize=8)
+            fontsize=12)
 
-ax.annotate('1 February 2022',
-            xy=(date_list[254], price_series[254]),
+ax.annotate('September 1: Greenwood joined Getafe on loan',
+            xy=(date_list[419], price_series[419]),
             xycoords='data',
             bbox=dict(boxstyle="square", fc="none", ec="red"),  # Set edge color to black
-            xytext=(87, 150),
+            xytext=(50, -80),
             textcoords='offset points',
             arrowprops=dict(arrowstyle='->', color='red'),  # Set arrow color to black
             va='center',
             ha='right',
-            fontsize=8)
+            fontsize=12)
 
-ax.annotate('15 October 2022',
-            xy=(date_list[431], price_series[431]),
-            xycoords='data',
-            bbox=dict(boxstyle="square", fc="none", ec="red"),  # Set edge color to black
-            xytext=(20, 100),
-            textcoords='offset points',
-            arrowprops=dict(arrowstyle='->', color='red'),  # Set arrow color to black
-            va='center',
-            ha='right',
-            fontsize=8)
-
-ax.annotate('17 October 2022',
-            xy=(date_list[432], price_series[432]),
-            xycoords='data',
-            bbox=dict(boxstyle="square", fc="none", ec="red"),  # Set edge color to black
-            xytext=(77, -50),
-            textcoords='offset points',
-            arrowprops=dict(arrowstyle='->', color='red'),  # Set arrow color to black
-            va='center',
-            ha='right',
-            fontsize=8)
-
-
-ax.annotate('21 November 2022',
-            xy=(date_list[457], price_series[457]),
-            xycoords='data',
-            bbox=dict(boxstyle="square", fc="none", ec="red"),  # Set edge color to black
-            xytext=(270, -65),
-            textcoords='offset points',
-            arrowprops=dict(arrowstyle='->', color='red'),  # Set arrow color to black
-            va='center',
-            ha='right',
-            fontsize=8)
-
-ax.annotate('2 February 2023',
-            xy=(date_list[506], price_series[506]),
-            xycoords='data',
-            bbox=dict(boxstyle="square", fc="none", ec="red"),  # Set edge color to black
-            xytext=(100, -120),
-            textcoords='offset points',
-            arrowprops=dict(arrowstyle='->', color='red'),  # Set arrow color to black
-            va='center',
-            ha='right',
-            fontsize=8)
-
-ax.annotate('16 August 2023',
-            xy=(date_list[640], price_series[640]),
-            xycoords='data',
-            bbox=dict(boxstyle="square", fc="none", ec="red"),  # Set edge color to black
-            xytext=(50, 85),
-            textcoords='offset points',
-            arrowprops=dict(arrowstyle='->', color='red'),  # Set arrow color to black
-            va='center',
-            ha='right',
-            fontsize=8)
-
-ax.annotate('1 September 2023',
-            xy=(date_list[652], price_series[652]),
-            xycoords='data',
-            bbox=dict(boxstyle="square", fc="none", ec="red"),  # Set edge color to black
-            xytext=(50, -100),
-            textcoords='offset points',
-            arrowprops=dict(arrowstyle='->', color='red'),  # Set arrow color to black
-            va='center',
-            ha='right',
-            fontsize=8)
 
 # Customize the color theme
 ax.set_facecolor('white')  # Set background color to white
